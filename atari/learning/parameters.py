@@ -37,3 +37,6 @@ render_env = False
 
 # CNN arch
 CNN_arch = 'DQN' # 'RESNET20' or 'DQN'
+
+
+# !python3 content/drive/My\ Drive/Colab\ Notebooks/rl-sandbox-repo/atari/learning/template.py --save_instance colab

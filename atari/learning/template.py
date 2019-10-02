@@ -13,7 +13,7 @@ from agent import Agent
 from epsilon_greedy import EpsilonGreedy
 from q_values import QValues
 sys.path.append('../neural_network/')
-from Resnet import *
+from resnet import *
 from neural_network import *
 import gym
 from frames import *
@@ -98,7 +98,7 @@ def train(args):
 
             if render_env:
                 env.render()
-                
+
             # Select and perform an action
             if len(frames) == 3:
                 action = agent.select_action(concat_frames(frames), env)
