@@ -1,0 +1,13 @@
+gymnasium
+swig
+gymnasium[box2d]
+gymnasium[accept-rom-license]
+gymnasium[atari]
+pillow
+numpy
+torch
+torchvision
+torchaudio
+matplotlib
+scikit-image
+statsmodels

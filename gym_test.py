@@ -1,18 +1,20 @@
-import gym
+import gymnasium as gym
 
-env = gym.make('LunarLander-v2')
-# env = gym.wrappers.Monitor(env, './video/', force = True)
+env = gym.make('Breakout-v0', render_mode='human')
 
-for i_episode in range(200000):
+for i_episode in range(100):
     observation = env.reset()
+
     for t in range(100):
         env.render()
         action = env.action_space.sample()
-        observation, reward, done, info = env.step(action)
-        print(observation.shape)
+        observation, reward, terminated, truncated, info = env.step(action)
 
-        if done:
-            print("Episode finished after {} timesteps".format(t+1))
+        if t == 0:
+            print('Observation shape:', observation.shape)
+
+        if terminated or truncated:
+            print('Episode finished after {} timesteps'.format(t+1))
             break
 
 env.close()
